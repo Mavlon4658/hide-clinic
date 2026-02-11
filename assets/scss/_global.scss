@@ -1,0 +1,27 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+$font-montserrat: "Montserrat", sans-serif;
+$font-inter: "Inter", sans-serif;
+$font-noto-sans-arabic: "Noto Sans Arabic", sans-serif;
+$font-manrope: "Manrope", sans-serif;
+$font-mazzard-H: "Mazzard H", sans-serif;
+$font-mazzard-L: "Mazzard L", sans-serif;
+$font-mazzard-M: "Mazzard M", sans-serif;
+// Fonts end
+
+// Colors
+// Colors end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
