@@ -996,6 +996,10 @@ button, input, textarea, li, div {
         margin: 10px 0 30px;
     }
 
+    &-swp {
+        overflow: visible;
+    }
+
     &-card {
         display: flex;
         flex-direction: column;

@@ -944,6 +944,9 @@ button, input, textarea, li, div {
   text-align: center;
   margin: 10px 0 30px;
 }
+.review-swp {
+  overflow: visible;
+}
 .review-card {
   display: flex;
   flex-direction: column;
