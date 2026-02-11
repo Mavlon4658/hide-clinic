@@ -54,6 +54,47 @@ button, input, textarea, li, div {
     }
 }
 
+.swp {
+    &-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        button {
+            width: 51px;
+            height: 49px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: linear-gradient(136deg, #dbaa46 0%, #d8cb3a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &-pagination {
+        width: auto !important;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        span {
+            margin: 0 !important;
+            padding: 0 !important;
+            opacity: 0.4;
+            background: #D9BD3F;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+
+            &.swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 // Header
 .header {
     position: absolute;
@@ -792,47 +833,6 @@ button, input, textarea, li, div {
         z-index: 20;
     }
 
-    .swp {
-        &-navigation {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-
-            button {
-                width: 51px;
-                height: 49px;
-                flex-shrink: 0;
-                border-radius: 50%;
-                background: linear-gradient(136deg, #dbaa46 0%, #d8cb3a 100%);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-
-        &-pagination {
-            width: auto;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-
-            span {
-                margin: 0 !important;
-                padding: 0;
-                opacity: 0.4;
-                background: #D9BD3F;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-
-                &.swiper-pagination-bullet-active {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
     &-foot {
         display: flex;
         flex-direction: column;
@@ -1307,8 +1307,81 @@ button, input, textarea, li, div {
 // License
 .license {
     padding-top: 120px;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .swiper {
+        overflow: visible;
+        margin-bottom: 40px;
+
+        &-wrapper {
+            align-items: stretch;
+        }
+    }
+
+    &-card {
+        box-shadow: 0 0 24px 0 rgba(97, 97, 97, 0.15);
+        background: #fff;
+        border-radius: 30px;
+        padding: 10px;
+        height: auto;
+        opacity: 0;
+        transition: .3s ease-in-out all;
+
+        &.swiper-slide-next, &.swiper-slide-active {
+            opacity: 1;
+        }
+
+        &__imgs {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+
+            img {
+                width: 100%;
+                box-shadow: 0 0 11px 0 rgba(113, 113, 113, 0.15);
+                border: 1px solid rgba(0, 0, 0, 0.06);
+                border-radius: 20px;
+                height: auto;
+            }
+        }
+
+        &__text {
+            padding: 20px 30px;
+            width: 100%;
+
+            h3 {
+                font-family: $font-mazzard-H;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                letter-spacing: -0.03em;
+                text-align: center;
+                color: #363636;
+                margin-bottom: 1px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0.03em;
+                text-align: center;
+                color: rgba(54, 54, 54, 0.6);
+            }
+        }
+    }
 }
 // License end
+
+// Request
+.request {
+    padding-top: 120px;
+}
+// Request end
 
 // Footer
 .footer {}

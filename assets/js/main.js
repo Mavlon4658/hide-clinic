@@ -102,3 +102,17 @@ const reviewSwp = new Swiper('.review-swp', {
     slidesPerView: 3,
     spaceBetween: 10,
 })
+
+// License slider
+const licenseSwp = new Swiper('.license .swiper', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.license .swp-navigation .next-btn',
+        prevEl: '.license .swp-navigation .prev-btn',
+    },
+    pagination: {
+        el: '.license .swp-navigation .swp-pagination',
+        clickable: true,
+    },
+})
