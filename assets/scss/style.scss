@@ -1152,6 +1152,155 @@ button, input, textarea, li, div {
 // Specialist
 .specialist {
     padding-top: 120px;
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 40px;
+
+        &__item {
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+
+            &:nth-child(2) {
+                .specialist-card {
+                    border-radius: 15px 15px 15px 120px;
+                    overflow: hidden;
+
+                    &__wrap {
+                        border-radius: 20px 20px 20px 130px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-card {
+        box-shadow: inset 0 4px 24px 0 rgba(97, 97, 97, 0.15);
+        background: #fefcf8;
+        border-radius: 120px 15px 15px 15px;
+        width: 100%;
+        height: 100%;
+        padding: 36.5px 70px 36.5px 442px;
+        position: relative;
+        z-index: 1;
+        
+        &__wrap {
+            box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
+            background: #fff;
+            border-radius: 130px 20px 20px 20px;
+            padding: 10px;
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 24px;
+            z-index: -1;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        h3 {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            color: #363636;
+        }
+
+        span {
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            color: rgba(54, 54, 54, 0.6);
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: -0.03em;
+            color: #363636;
+            margin-bottom: 3px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            color: rgba(54, 54, 54, 0.7);
+        }
+    }
+
+    .main-card {
+        width: 335px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
+        background: #fff;
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
+
+        &__img {
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                box-shadow: inset 0 0 9px 0 rgba(103, 103, 103, 0.25);
+                border-radius: 15px;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__text {
+            width: 47px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-weight: 700;
+                font-size: 23px;
+                line-height: 120%;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                text-align: center;
+                background: linear-gradient(136deg, #dbaa46 0%, #d8cb3a 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+            }
+        }
+    }
 }
 // Specialist end
 
