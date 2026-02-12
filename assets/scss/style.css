@@ -1603,4 +1603,70 @@ button, input, textarea, li, div {
 
 .contact {
   padding-top: 120px;
+}
+
+.footer {
+  padding: 30px 0 80px;
+}
+.footer-container {
+  box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+}
+.footer-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer-left a {
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: rgba(54, 54, 54, 0.7);
+}
+.footer-left ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-left ul a svg path {
+  transition: 0.2s ease-in-out all;
+}
+.footer-left ul a:hover svg path {
+  fill-opacity: 1;
+  fill: #D9BE3F;
+}
+.footer-navs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.footer-navs li {
+  display: flex;
+}
+.footer-navs__link {
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  text-align: right;
+  color: rgba(54, 54, 54, 0.7);
+}
+.footer .line {
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 1px;
+  flex-shrink: 0;
 }/*# sourceMappingURL=style.css.map */
