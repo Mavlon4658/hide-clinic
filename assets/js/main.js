@@ -116,3 +116,32 @@ const licenseSwp = new Swiper('.license .swiper', {
         clickable: true,
     },
 })
+
+// Accordions
+
+const accordions = document.querySelectorAll('.accordions');
+
+if (accordions) {
+    accordions.forEach((item) => {
+        const acc = item.querySelectorAll('.accordion');
+        acc.forEach((accItem, accItemID) => {
+            const accBtn = accItem.querySelector('.accordion-btn');
+            const accBody = accItem.querySelector('.accordion-body__wrap');
+
+            if (accItem.classList.contains('active')) {
+                accBody.style.maxHeight = accBody.scrollHeight + 'px';
+            }
+        
+            accBtn.addEventListener('click', () => {
+                accItem.classList.toggle('active');
+                accBody.style.maxHeight = accBody.style.maxHeight ? null : accBody.scrollHeight + 'px';
+                acc.forEach((el, elID) => {
+                    if (elID != accItemID) {
+                        el.querySelector('.accordion-body__wrap').style.maxHeight = null;
+                        el.classList.remove('active')
+                    }
+                })
+            });
+        })
+    });
+}
