@@ -233,3 +233,16 @@ specialistParentSwp.on('slideChange', () => {
         }
     })
 });
+
+const acceptModal = document.querySelector('.accept-modal');
+const acceptModalBtn = document.querySelector('.accept-modal .main-btn');
+
+acceptModalBtn.onclick = () => {
+    acceptModal.classList.remove('active');
+}
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        acceptModal.classList.add('active');
+    }, 30 * 1000);
+});
