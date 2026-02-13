@@ -2970,11 +2970,27 @@ button, input, textarea, li, div {
 .contact {
     padding-top: 120px;
 
+    @include media(1024) {
+        padding-top: 60px;
+    }
+
     &-content {
         margin-top: 30px;
         display: flex;
         align-items: stretch;
         gap: 30px;
+
+        @include media(1200) {
+            flex-direction: column;
+        }
+
+        @include media(1024) {
+            margin-top: 20px;
+        }
+
+        @include media(768) {
+            gap: 10px;
+        }
     }
 
     &-left {
@@ -2987,6 +3003,24 @@ button, input, textarea, li, div {
         justify-content: center;
         border-radius: 20px;
         overflow: hidden;
+
+        @include media(1380) {
+            width: 650px;
+        }
+
+        @include media(1280) {
+            width: 580px;
+        }
+
+        @include media(1200) {
+            width: 100%;
+            padding: 60px 30px;
+        }
+
+        @include media(768) {
+            padding: 20px;
+            height: 368px;
+        }
         
         &::after {
             content: "";
@@ -3023,6 +3057,16 @@ button, input, textarea, li, div {
             align-items: center;
             text-align: center;
 
+            @include media(768) {
+                max-width: 303px;
+            }
+
+            img {
+                @include media(768) {
+                    width: 34.75px;
+                }
+            }
+
             h3 {
                 font-weight: 700;
                 font-size: 30px;
@@ -3031,6 +3075,10 @@ button, input, textarea, li, div {
                 text-transform: uppercase;
                 color: #363636;
                 margin: 13px 0 7px;
+
+                @include media(768) {
+                    font-size: 18px;
+                }
             }
 
             p {
@@ -3039,11 +3087,19 @@ button, input, textarea, li, div {
                 letter-spacing: 0.03em;
                 color: rgba(54, 54, 54, 0.7);
                 margin-bottom: 20px;
+
+                @include media(768) {
+                    font-size: 14px;
+                }
             }
 
             .main-btn {
                 height: 47px;
                 padding: 0 30px;
+
+                @include media(768) {
+                    height: 45px;
+                }
             }
         }
     }
@@ -3053,6 +3109,15 @@ button, input, textarea, li, div {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @include media(1200) {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        @include media(768) {
+            flex-direction: column;
+        }
     }
 
     .alert {
@@ -3068,6 +3133,11 @@ button, input, textarea, li, div {
         border: 1px solid #ebebeb;
         border-radius: 50px;
 
+        @include media(768) {
+            font-size: 14px;
+            padding: 8px 11px;
+        }
+
         span {
             background: linear-gradient(136deg, #dbaa46 0%, #d8cb3a 100%);
             background-clip: text;
@@ -3082,6 +3152,10 @@ button, input, textarea, li, div {
         gap: 10px;
         width: 100%;
 
+        @include media(1200) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         &__item {
             backdrop-filter: blur(5px);
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
@@ -3095,6 +3169,15 @@ button, input, textarea, li, div {
             padding: 25px;
             position: relative;
             z-index: 1;
+
+            @include media(768) {
+                min-height: inherit;
+                padding: 20px;
+                flex-direction: row;
+                align-items: flex-start;
+                overflow: hidden;
+                border-radius: 20px;
+            }
 
             &:nth-child(2) {
                 .icon {
@@ -3116,6 +3199,10 @@ button, input, textarea, li, div {
                 top: -29px;
                 left: -19px;
                 z-index: -1;
+
+                @include media(768) {
+                    display: none;
+                }
             }
 
             p {
@@ -3124,6 +3211,11 @@ button, input, textarea, li, div {
                 letter-spacing: 0.03em;
                 text-align: right;
                 color: rgba(54, 54, 54, 0.7);
+
+                @include media(768) {
+                    max-width: 232px;
+                    font-size: 14px;
+                }
             }
 
             ul {
@@ -3131,6 +3223,10 @@ button, input, textarea, li, div {
                 flex-direction: column;
                 align-items: flex-end;
                 gap: 10px;
+
+                @include media(768) {
+                    gap: 6px;
+                }
             }
 
             li {
@@ -3138,12 +3234,20 @@ button, input, textarea, li, div {
                 align-items: center;
                 gap: 7px;
 
+                @include media(768) {
+                    gap: 4px;
+                }
+
                 b {
                     font-family: $font-montserrat;
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 120%;
                     color: #363636;
+
+                    @include media(768) {
+                        font-size: 14px;
+                    }
                 }
 
                 span {
@@ -3151,6 +3255,10 @@ button, input, textarea, li, div {
                     line-height: 120%;
                     letter-spacing: 0.03em;
                     color: rgba(54, 54, 54, 0.7);
+
+                    @include media(768) {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -3168,11 +3276,25 @@ button, input, textarea, li, div {
         flex-direction: column;
         justify-content: space-between;
         gap: 30px;
+
+        @include media(1200) {
+            height: auto;
+        }
+
+        @include media(768) {
+            padding: 20px;
+            border-radius: 20px;
+            gap: 20px;
+        }
         
         &__head {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include media(768) {
+                flex-direction: row-reverse;
+            }
 
             a {
                 display: flex;
@@ -3228,6 +3350,7 @@ button, input, textarea, li, div {
                 padding: 4px 4px 4px 22px;
                 justify-content: space-between;
                 height: auto;
+                font-size: 16px;
 
                 img {
                     width: 40px;
@@ -3238,6 +3361,11 @@ button, input, textarea, li, div {
                 font-size: 12px;
                 line-height: 150%;
                 margin-top: 20px;
+
+                @include media(768) {
+                    margin-top: 12px;
+                    text-align: center;
+                }
                 
                 a {
                     display: inline;
@@ -3253,6 +3381,10 @@ button, input, textarea, li, div {
 // Footer
 .footer {
     padding: 30px 0 80px;
+
+    @include media(1024) {
+        padding: 30px 0 50px;
+    }
     
     &-container {
         box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
@@ -3270,6 +3402,22 @@ button, input, textarea, li, div {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include media(768) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-logo {
+        @include media(768) {
+            order: 1;
+            margin-bottom: 22px;
+
+            img {
+                width: 159px;
+            }
+        }
     }
 
     &-left {
@@ -3277,6 +3425,11 @@ button, input, textarea, li, div {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+
+        @include media(768) {
+            align-items: center;
+            order: 3;
+        }
 
         a {
             font-size: 16px;
@@ -3291,6 +3444,9 @@ button, input, textarea, li, div {
             gap: 10px;
 
             a {
+                display: flex;
+                align-items: center;
+
                 svg path {
                     transition: .2s ease-in-out all;
                 }
@@ -3301,6 +3457,11 @@ button, input, textarea, li, div {
                 }
             }
         }
+
+        li {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &-navs {
@@ -3308,6 +3469,13 @@ button, input, textarea, li, div {
         flex-direction: column;
         align-items: flex-end;
         gap: 5px;
+
+        @include media(768) {
+            margin-bottom: 12px;
+            order: 2;
+            align-items: center;
+            gap: 12px;
+        }
 
         li {
             display: flex;
@@ -3327,6 +3495,18 @@ button, input, textarea, li, div {
         width: 100%;
         height: 1px;
         flex-shrink: 0;
+    }
+
+    &-text {
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: rgba(54, 54, 54, 0.7);
+        
+        span {
+            color: rgba(223, 26, 26, 0.7);
+        }
     }
 }
 // Footer end
