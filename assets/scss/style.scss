@@ -43,6 +43,11 @@ button, input, textarea, li, div {
         padding: 0 15px;
         font-size: 14px;
     }
+
+    &:hover {
+        background: #EACC42;
+        color: #363636;
+    }
 }
 
 .sec-title {
@@ -92,6 +97,14 @@ button, input, textarea, li, div {
                 svg, img {
                     width: 13px;
                     height: auto;
+                }
+            }
+
+            &:hover {
+                background: #EACC42;
+
+                img {
+                    filter: brightness(0.4)
                 }
             }
         }

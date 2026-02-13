@@ -112,6 +112,10 @@ button, input, textarea, li, div {
     font-size: 14px;
   }
 }
+.main-btn:hover {
+  background: #EACC42;
+  color: #363636;
+}
 
 .sec-title {
   font-weight: 700;
@@ -162,6 +166,12 @@ button, input, textarea, li, div {
     width: 13px;
     height: auto;
   }
+}
+.swp-navigation button:hover {
+  background: #EACC42;
+}
+.swp-navigation button:hover img {
+  filter: brightness(0.4);
 }
 .swp-pagination {
   width: auto !important;
