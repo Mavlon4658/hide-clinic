@@ -206,6 +206,13 @@ button, input, textarea, li, div {
   line-height: 150%;
   color: black;
 }
+@media screen and (max-width: 768px) {
+  .form-inp {
+    height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}
 .form-inp::-moz-placeholder {
   color: rgba(54, 54, 54, 0.5);
 }
@@ -1802,6 +1809,11 @@ button, input, textarea, li, div {
     margin: 0 auto 25px;
   }
 }
+@media screen and (max-width: 768px) {
+  .patient-content h2 {
+    font-size: 22px;
+  }
+}
 .patient-content .icon {
   display: none;
   position: absolute;
@@ -2385,11 +2397,21 @@ button, input, textarea, li, div {
 .request {
   padding-top: 120px;
 }
+@media screen and (max-width: 1024px) {
+  .request {
+    padding-top: 60px;
+  }
+}
 .request-container {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   gap: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .request-container {
+    flex-direction: column-reverse;
+  }
 }
 .request-form {
   width: 100%;
@@ -2400,12 +2422,28 @@ button, input, textarea, li, div {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 576px) {
+  .request-form {
+    padding: 30px;
+    border-radius: 20px;
+  }
+}
 .request-form .main-img {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 364px;
   z-index: -1;
+}
+@media screen and (max-width: 1380px) {
+  .request-form .main-img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .request-form .main-img {
+    display: none;
+  }
 }
 .request-form__content {
   max-width: 460px;
@@ -2414,6 +2452,16 @@ button, input, textarea, li, div {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (max-width: 1300px) {
+  .request-form__content {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .request-form__content {
+    gap: 20px;
+  }
 }
 .request-form__group {
   display: flex;
@@ -2431,6 +2479,11 @@ button, input, textarea, li, div {
   text-align: center;
   color: #363636;
 }
+@media screen and (max-width: 576px) {
+  .request-form h2 {
+    font-size: 17px;
+  }
+}
 .request-form h2 span {
   color: #dabc40;
   display: inline;
@@ -2443,6 +2496,13 @@ button, input, textarea, li, div {
 }
 .request-form .main-btn {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .request-form .main-btn {
+    height: 55px;
+    font-size: 16px;
+    margin-bottom: -10px;
+  }
 }
 .request-form p {
   font-size: 12px;
@@ -2462,6 +2522,11 @@ button, input, textarea, li, div {
   width: 423px;
   flex-shrink: 0;
 }
+@media screen and (max-width: 1024px) {
+  .request-list {
+    width: 100%;
+  }
+}
 .request-card {
   position: relative;
   z-index: 1;
@@ -2474,12 +2539,30 @@ button, input, textarea, li, div {
   justify-content: flex-end;
   overflow: hidden;
 }
+@media screen and (max-width: 1024px) {
+  .request-card {
+    min-height: 211px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .request-card {
+    min-height: 141px;
+    padding: 30px 40px 40px;
+    border-radius: 20px;
+  }
+}
 .request-card .main-img {
   width: 186px;
   position: absolute;
   left: 35px;
   bottom: 0;
   z-index: -1;
+}
+@media screen and (max-width: 576px) {
+  .request-card .main-img {
+    width: 122px;
+    left: 32px;
+  }
 }
 .request-card__text {
   max-width: 162px;
@@ -2498,6 +2581,11 @@ button, input, textarea, li, div {
   text-align: right;
   color: #363636;
 }
+@media screen and (max-width: 576px) {
+  .request-card__title {
+    font-size: 18px;
+  }
+}
 .request-card__title span {
   color: #dabc40;
 }
@@ -2509,8 +2597,18 @@ button, input, textarea, li, div {
   color: #363636;
   font-size: 16px;
 }
+@media screen and (max-width: 576px) {
+  .request-card__price {
+    font-size: 14px;
+  }
+}
 .request-card__price span {
   font-size: 13px;
+}
+@media screen and (max-width: 576px) {
+  .request-card__price span {
+    font-size: 11px;
+  }
 }
 .request-card p {
   font-family: "Inter", sans-serif;
@@ -2530,6 +2628,12 @@ button, input, textarea, li, div {
   background: rgba(255, 255, 255, 0.5);
   width: 100%;
 }
+@media screen and (max-width: 576px) {
+  .request-card p {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
 .request-right {
   border-radius: 30px;
   background: #fff;
@@ -2539,6 +2643,11 @@ button, input, textarea, li, div {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+@media screen and (max-width: 1024px) {
+  .request-right {
+    display: none;
+  }
 }
 
 .faq {
