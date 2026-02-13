@@ -138,6 +138,11 @@ button, input, textarea, li, div {
   justify-content: center;
   gap: 40px;
 }
+@media screen and (max-width: 768px) {
+  .swp-navigation {
+    gap: 30px;
+  }
+}
 .swp-navigation button {
   width: 51px;
   height: 49px;
@@ -1947,11 +1952,21 @@ button, input, textarea, li, div {
 .specialist {
   padding-top: 120px;
 }
+@media screen and (max-width: 1024px) {
+  .specialist {
+    padding-top: 60px;
+  }
+}
 .specialist-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .specialist-list {
+    display: none;
+  }
 }
 .specialist-list__item {
   display: flex;
@@ -1975,6 +1990,11 @@ button, input, textarea, li, div {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 1280px) {
+  .specialist-card {
+    padding: 30px 40px 30px 390px;
+  }
+}
 .specialist-card__wrap {
   box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
   background: #fff;
@@ -1992,6 +2012,11 @@ button, input, textarea, li, div {
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (max-width: 1280px) {
+  .specialist-card ul {
+    gap: 15px;
+  }
+}
 .specialist-card h3 {
   font-weight: 700;
   font-size: 30px;
@@ -1999,11 +2024,21 @@ button, input, textarea, li, div {
   letter-spacing: 0.03em;
   color: #363636;
 }
+@media screen and (max-width: 1280px) {
+  .specialist-card h3 {
+    font-size: 22px;
+  }
+}
 .specialist-card span {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.03em;
   color: rgba(54, 54, 54, 0.6);
+}
+@media screen and (max-width: 1280px) {
+  .specialist-card span {
+    font-size: 14px;
+  }
 }
 .specialist-card h4 {
   font-weight: 600;
@@ -2013,12 +2048,22 @@ button, input, textarea, li, div {
   color: #363636;
   margin-bottom: 3px;
 }
+@media screen and (max-width: 1280px) {
+  .specialist-card h4 {
+    font-size: 18px;
+  }
+}
 .specialist-card p {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.03em;
   color: rgba(54, 54, 54, 0.7);
+}
+@media screen and (max-width: 1280px) {
+  .specialist-card p {
+    font-size: 14px;
+  }
 }
 .specialist .main-card {
   width: 335px;
@@ -2076,6 +2121,166 @@ button, input, textarea, li, div {
   -webkit-text-fill-color: transparent;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+}
+.specialist-parent {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .specialist-parent {
+    display: block;
+  }
+}
+.specialist-parent .swiper {
+  overflow: visible;
+}
+.specialist-parent__card {
+  box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
+  background: #fff;
+  border-radius: 20px;
+  padding: 252px 20px 20px;
+  position: relative;
+  z-index: 1;
+}
+.specialist-parent__card .bg-img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 20px;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.specialist-parent__card .card-img {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 308px;
+  min-width: 308px;
+}
+.specialist-parent__card .card-content {
+  width: 100%;
+  box-shadow: 0 0 9px 0 rgba(156, 156, 156, 0.25);
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+}
+.specialist-parent__card .card-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #363636;
+}
+.specialist-parent__card .card-subtitle {
+  text-align: center;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: rgba(54, 54, 54, 0.6);
+  margin-bottom: 10px;
+}
+.specialist-parent__card .card-tab__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.specialist-parent__card .card-tab__btn button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: rgba(54, 54, 54, 0.5);
+  border: 1px solid rgba(54, 54, 54, 0.2);
+  border-radius: 92px;
+  padding: 5px 12px;
+}
+.specialist-parent__card .card-tab__btn button.active {
+  background: linear-gradient(136deg, #dbaa46 0%, #d8cb3a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #DBAA46;
+}
+.specialist-parent__card .card-tab__body:not(.active) {
+  display: none;
+}
+.specialist-parent__card .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.specialist-parent__card .card-text__item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.specialist-parent__card .card-text__item h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #363636;
+}
+.specialist-parent__card .card-text__item p {
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgba(54, 54, 54, 0.7);
+}
+.specialist-parent__card .main-img {
+  padding-top: 10px;
+  text-align: center;
+}
+.specialist-parent__card .main-img img {
+  height: 221px;
+  box-shadow: 0 0 9px 0 rgba(156, 156, 156, 0.25);
+  border-radius: 5px;
+}
+.specialist-child {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+@media screen and (max-width: 1024px) {
+  .specialist-child {
+    display: flex;
+  }
+}
+.specialist-child__card {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  padding: 9px 0px 0px;
+  width: 80px;
+  height: 94px;
+  background: #e2e2e2;
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
+}
+.specialist-child__card img {
+  position: absolute;
+  bottom: -1.49px;
+  left: 0;
+  width: 100%;
+}
+.specialist-child__card.active {
+  opacity: 0.4;
+}
+@media screen and (min-width: 1024px) {
+  .specialist .swp-navigation {
+    display: none !important;
+  }
 }
 
 .license {

@@ -164,3 +164,67 @@ if (accordions) {
         })
     });
 }
+
+// Specialist tab
+const specialistTab = document.querySelectorAll('.specialist .card-tab');
+specialistTab.forEach(el => {
+    const tabBtns = el.querySelectorAll('.card-tab__btn button');
+    const tabBodys = el.querySelectorAll('.card-tab__body');
+    tabBtns.forEach((btn, btnIdx) => {
+        btn.onclick = () => {
+            tabBtns.forEach((a, idx) => {
+                if (idx == btnIdx) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            })
+            tabBodys.forEach((a, idx) => {
+                if (idx == btnIdx) {
+                    a.classList.add('active');
+                } else {
+                    a.classList.remove('active');
+                }
+            })
+        }
+    })
+})
+
+// specialist paret slider
+const specialistParentSwp = new Swiper('.specialist-parent .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    navigation: {
+        nextEl: '.specialist .swp-navigation .next-btn',
+        prevEl: '.specialist .swp-navigation .prev-btn',
+    },
+    pagination: {
+        el: '.specialist .swp-navigation .swp-pagination',
+        clickable: true,
+    },
+})
+
+const specialistChildCard = document.querySelectorAll('.specialist-child__card');
+
+specialistChildCard.forEach((btn, btnIdx) => {
+    btn.onclick = () => {
+        specialistParentSwp.slideTo(btnIdx)
+        specialistChildCard.forEach((el, idx) => {
+            if (idx == btnIdx) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
+            }
+        })
+    }
+})
+
+specialistParentSwp.on('slideChange', () => {
+    specialistChildCard.forEach((el, idx) => {
+        if (idx == specialistParentSwp.realIndex) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    })
+});
