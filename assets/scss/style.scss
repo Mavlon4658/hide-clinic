@@ -2702,11 +2702,20 @@ button, input, textarea, li, div {
 .faq {
     padding-top: 120px;
 
+    @include media(1024) {
+        padding-top: 60px;
+    }
+
     &-content {
         display: flex;
         align-items: stretch;
         gap: 20px;
         margin-top: 40px;
+
+        @include media(1024) {
+            flex-direction: column;
+            margin-top: 20px;
+        }
     }
 
     &-accordions {
@@ -2728,6 +2737,14 @@ button, input, textarea, li, div {
         gap: 40px;
         border-radius: 20px;
 
+        @include media(1024) {
+            width: 100%;
+        }
+
+        @include media(768) {
+            padding: 30px;
+        }
+
         &__head {
             width: 100%;
 
@@ -2740,6 +2757,11 @@ button, input, textarea, li, div {
                 text-align: center;
                 color: #363636;
                 margin-bottom: 10px;
+
+                @include media(768) {
+                    font-size: 22px;
+                    margin-bottom: 5px;
+                }
             }
 
             p {
@@ -2748,6 +2770,10 @@ button, input, textarea, li, div {
                 letter-spacing: 0.03em;
                 text-align: center;
                 color: rgba(54, 54, 54, 0.7);
+
+                @include media(768) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -2757,6 +2783,10 @@ button, input, textarea, li, div {
             align-items: center;
             gap: 20px;
             width: 100%;
+
+            @include media(768) {
+                gap: 12px;
+            }
 
             .links {
                 width: 100%;
@@ -2771,9 +2801,28 @@ button, input, textarea, li, div {
                 padding: 4px 4px 4px 30px;
                 height: auto;
 
+                @include media(768) {
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 14px;
+                }
+
                 img {
                     width: 40px;
                     flex-shrink: 0;
+
+                    @include media(768) {
+                        display: none;
+                        width: 16px;
+                    }
+
+                    &.sm {
+                        display: none;
+
+                        @include media(768) {
+                            display: block;
+                        }
+                    }
                 }
             }
 
@@ -2783,6 +2832,10 @@ button, input, textarea, li, div {
                 letter-spacing: 0.03em;
                 text-align: center;
                 color: rgba(54, 54, 54, 0.7);
+
+                @include media(768) {
+                    font-size: 10px;
+                }
 
                 a {
                     display: inline;
@@ -2799,6 +2852,7 @@ button, input, textarea, li, div {
     box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
     background: #fff;
     border-radius: 20px;
+    position: relative;
 
     &.active {
         .accordion-btn {
@@ -2806,6 +2860,10 @@ button, input, textarea, li, div {
 
             .icon {
                 transform: rotateZ(180deg);
+                
+                @include media(768) {
+                    transform: translateX(-50%) rotateZ(180deg);
+                }
             }
         }
     }
@@ -2816,9 +2874,14 @@ button, input, textarea, li, div {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
         cursor: pointer;
         user-select: none;
         transition: .2s ease-in-out all;
+
+        @include media(768) {
+            padding: 20px 20px 35px;
+        }
 
         &__text {
             font-weight: 700;
@@ -2827,6 +2890,10 @@ button, input, textarea, li, div {
             letter-spacing: 0.03em;
             text-transform: uppercase;
             color: #363636;
+
+            @include media(768) {
+                font-size: 14px;
+            }
             
             span {
                 display: inline;
@@ -2838,11 +2905,23 @@ button, input, textarea, li, div {
             width: 20px;
             flex-shrink: 0;
             transition: .2s ease-in-out all;
+
+            @include media(768) {
+                width: 14px;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 
     &-body {
         padding: 0 72px 40px 40px;
+
+        @include media(768) {
+            padding: 0 20px 35px;
+        }
 
         &__wrap {
             max-height: 0;
@@ -2855,6 +2934,11 @@ button, input, textarea, li, div {
             line-height: 140%;
             letter-spacing: 0.03em;
             color: rgba(54, 54, 54, 0.7);
+
+            @include media(768) {
+                font-size: 14px;
+                line-height: 150%;
+            }
         }
 
         b {
@@ -2865,10 +2949,18 @@ button, input, textarea, li, div {
         ul {
             list-style-type: disc;
             padding-left: 24px;
+
+            @include media(768) {
+                padding-left: 20px;
+            }
         }
 
         li::marker {
             font-size: 10px;
+
+            @include media(768) {
+                font-size: 8px;
+            }
         }
     }
 }
