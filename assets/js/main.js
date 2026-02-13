@@ -124,8 +124,13 @@ const reviewSwp = new Swiper('.review-swp', {
 
 // License slider
 const licenseSwp = new Swiper('.license .swiper', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+    },
     navigation: {
         nextEl: '.license .swp-navigation .next-btn',
         prevEl: '.license .swp-navigation .prev-btn',

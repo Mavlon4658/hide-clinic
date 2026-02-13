@@ -2328,8 +2328,16 @@ button, input, textarea, li, div {
 .license {
     padding-top: 120px;
 
+    @include media(1024) {
+        padding-top: 60px;
+    }
+
     h2 {
         margin-bottom: 40px;
+
+        @include media(768) {
+            margin-bottom: 20px;
+        }
     }
 
     .swiper {
@@ -2350,6 +2358,10 @@ button, input, textarea, li, div {
         opacity: 0;
         transition: .3s ease-in-out all;
 
+        @include media(768) {
+            border-radius: 20px;
+        }
+
         &.swiper-slide-next, &.swiper-slide-active {
             opacity: 1;
         }
@@ -2360,6 +2372,10 @@ button, input, textarea, li, div {
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-bottom: 10px;
+
+            @include media(768) {
+                gap: 5px;
+            }
 
             img {
                 width: 100%;
@@ -2374,6 +2390,10 @@ button, input, textarea, li, div {
             padding: 20px 30px;
             width: 100%;
 
+            @include media(768) {
+                padding: 10px;
+            }
+
             h3 {
                 font-family: $font-mazzard-H;
                 font-weight: 600;
@@ -2383,6 +2403,10 @@ button, input, textarea, li, div {
                 text-align: center;
                 color: #363636;
                 margin-bottom: 1px;
+
+                @include media(768) {
+                    font-size: 14px;
+                }
             }
 
             p {
@@ -2391,6 +2415,14 @@ button, input, textarea, li, div {
                 letter-spacing: 0.03em;
                 text-align: center;
                 color: rgba(54, 54, 54, 0.6);
+
+                @include media(768) {
+                    font-size: 14px;
+
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
     }

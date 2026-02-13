@@ -2286,8 +2286,18 @@ button, input, textarea, li, div {
 .license {
   padding-top: 120px;
 }
+@media screen and (max-width: 1024px) {
+  .license {
+    padding-top: 60px;
+  }
+}
 .license h2 {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .license h2 {
+    margin-bottom: 20px;
+  }
 }
 .license .swiper {
   overflow: visible;
@@ -2305,6 +2315,11 @@ button, input, textarea, li, div {
   opacity: 0;
   transition: 0.3s ease-in-out all;
 }
+@media screen and (max-width: 768px) {
+  .license-card {
+    border-radius: 20px;
+  }
+}
 .license-card.swiper-slide-next, .license-card.swiper-slide-active {
   opacity: 1;
 }
@@ -2314,6 +2329,11 @@ button, input, textarea, li, div {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .license-card__imgs {
+    gap: 5px;
+  }
 }
 .license-card__imgs img {
   width: 100%;
@@ -2326,6 +2346,11 @@ button, input, textarea, li, div {
   padding: 20px 30px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .license-card__text {
+    padding: 10px;
+  }
+}
 .license-card__text h3 {
   font-family: "Mazzard H", sans-serif;
   font-weight: 600;
@@ -2336,12 +2361,25 @@ button, input, textarea, li, div {
   color: #363636;
   margin-bottom: 1px;
 }
+@media screen and (max-width: 768px) {
+  .license-card__text h3 {
+    font-size: 14px;
+  }
+}
 .license-card__text p {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.03em;
   text-align: center;
   color: rgba(54, 54, 54, 0.6);
+}
+@media screen and (max-width: 768px) {
+  .license-card__text p {
+    font-size: 14px;
+  }
+  .license-card__text p br {
+    display: none;
+  }
 }
 
 .request {
