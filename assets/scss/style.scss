@@ -238,6 +238,7 @@ button, input, textarea, li, div {
     .main-btn {
         height: 45px;
         padding: 0 16px;
+        border-radius: 9px;
 
         @include media(1024) {
             display: none;

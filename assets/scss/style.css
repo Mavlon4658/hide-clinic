@@ -302,6 +302,7 @@ button, input, textarea, li, div {
 .header .main-btn {
   height: 45px;
   padding: 0 16px;
+  border-radius: 9px;
 }
 @media screen and (max-width: 1024px) {
   .header .main-btn {
