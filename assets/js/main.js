@@ -21,11 +21,7 @@ const swiper = new Swiper('.swiper-examples', {
     spaceBetween: -94,
     initialSlide: 3,
     speed: 400,
-    breakpoints: {
-        1220: {
-
-        }
-    },
+    loop: true,
     navigation: {
         nextEl: '.experience .swp-navigation .next-btn',
         prevEl: '.experience .swp-navigation .prev-btn',
@@ -102,14 +98,17 @@ experienceList.forEach((btn, btnIdx) => {
 const reviewSwp = new Swiper('.review-swp', {
     slidesPerView: 1,
     spaceBetween: 15,
+    loop: true,
     breakpoints: {
         1200: {
             spaceBetween: 10,
             slidesPerView: 3,
+            loop: false
         },
         768: {
             spaceBetween: 10,
             slidesPerView: 2,
+            loop: true,
         },
     },
     navigation: {
@@ -126,6 +125,7 @@ const reviewSwp = new Swiper('.review-swp', {
 const licenseSwp = new Swiper('.license .swiper', {
     slidesPerView: 1,
     spaceBetween: 20,
+    loop: true,
     breakpoints: {
         768: {
             slidesPerView: 2,
@@ -199,6 +199,7 @@ specialistTab.forEach(el => {
 const specialistParentSwp = new Swiper('.specialist-parent .swiper', {
     slidesPerView: 1,
     spaceBetween: 15,
+    loop: true,
     navigation: {
         nextEl: '.specialist .swp-navigation .next-btn',
         prevEl: '.specialist .swp-navigation .prev-btn',
