@@ -542,6 +542,10 @@ button, input, textarea, li, div {
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
                 display: inline;
+
+                &:hover {
+                    color: #d9bd3f;
+                }
             }
         }
     }
@@ -839,6 +843,10 @@ button, input, textarea, li, div {
         a {
             text-decoration: underline;
             text-decoration-skip-ink: none;
+
+            &:hover {
+                color: #d9bd3f;
+            }
         }
     }
 }
@@ -1137,6 +1145,10 @@ button, input, textarea, li, div {
                 display: inline;
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
+
+                &:hover {
+                    color: #d9bd3f;
+                }
             }
         }
     }
@@ -1492,6 +1504,10 @@ button, input, textarea, li, div {
                 display: inline;
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
+
+                &:hover {
+                    color: #d9bd3f;
+                }
             }
         }
     }
@@ -1946,6 +1962,10 @@ button, input, textarea, li, div {
                     display: inline;
                     text-decoration: underline;
                     text-decoration-skip-ink: none;
+
+                    &:hover {
+                        color: #d9bd3f;
+                    }
                 }
             }
         }
@@ -2577,6 +2597,10 @@ button, input, textarea, li, div {
                 display: inline;
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
+
+                &:hover {
+                    color: #d9bd3f;
+                }
             }
         }
     }
@@ -2859,6 +2883,10 @@ button, input, textarea, li, div {
                 a {
                     display: inline;
                     text-decoration: underline;
+
+                    &:hover {
+                        color: #d9bd3f;
+                    }
                 }
             }
         }
@@ -3389,7 +3417,11 @@ button, input, textarea, li, div {
                 a {
                     display: inline;
                     text-decoration: underline;
-                    text-decoration-skip-ink: none;
+                    text-decoration-skip-ink: none; 
+
+                    &:hover {
+                        color: #d9bd3f;
+                    }
                 }
             }
         }
@@ -3455,6 +3487,10 @@ button, input, textarea, li, div {
             line-height: 120%;
             letter-spacing: 0.03em;
             color: rgba(54, 54, 54, 0.7);
+
+            &:hover {
+                color: #d9bd3f;
+            }
         }
 
         ul {
@@ -3801,6 +3837,12 @@ button, input, textarea, li, div {
 
             @include media(768) {
                 font-size: 14px;
+            }
+
+            a {
+                &:hover {
+                    color: #d9bd3f;
+                }
             }
         }
     }

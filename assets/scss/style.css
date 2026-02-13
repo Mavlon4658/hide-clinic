@@ -613,6 +613,9 @@ button, input, textarea, li, div {
           text-decoration-skip-ink: none;
   display: inline;
 }
+.home-content h4 a:hover {
+  color: #d9bd3f;
+}
 
 .about {
   padding-top: 120px;
@@ -896,6 +899,9 @@ button, input, textarea, li, div {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+.about h4 a:hover {
+  color: #d9bd3f;
 }
 
 .prices {
@@ -1186,6 +1192,9 @@ button, input, textarea, li, div {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+.prices-foot p a:hover {
+  color: #d9bd3f;
 }
 
 .experience {
@@ -1500,6 +1509,9 @@ button, input, textarea, li, div {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+.experience-foot p a:hover {
+  color: #d9bd3f;
 }
 
 .choice {
@@ -1945,6 +1957,9 @@ button, input, textarea, li, div {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+.patient-content__foot p a:hover {
+  color: #d9bd3f;
 }
 .patient-card {
   width: 100%;
@@ -2530,6 +2545,9 @@ button, input, textarea, li, div {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+.request-form p a:hover {
+  color: #d9bd3f;
+}
 .request-list {
   display: flex;
   flex-direction: column;
@@ -2808,6 +2826,9 @@ button, input, textarea, li, div {
 .faq-card__foot p a {
   display: inline;
   text-decoration: underline;
+}
+.faq-card__foot p a:hover {
+  color: #d9bd3f;
 }
 
 .accordion {
@@ -3331,6 +3352,9 @@ button, input, textarea, li, div {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+.contact-form__foot p a:hover {
+  color: #d9bd3f;
+}
 
 .footer {
   padding: 30px 0 80px;
@@ -3388,6 +3412,9 @@ button, input, textarea, li, div {
   line-height: 120%;
   letter-spacing: 0.03em;
   color: rgba(54, 54, 54, 0.7);
+}
+.footer-left a:hover {
+  color: #d9bd3f;
 }
 .footer-left ul {
   display: flex;
@@ -3721,4 +3748,7 @@ button, input, textarea, li, div {
   .modal .text p, .modal .text li {
     font-size: 14px;
   }
+}
+.modal .text p a:hover, .modal .text li a:hover {
+  color: #d9bd3f;
 }/*# sourceMappingURL=style.css.map */
