@@ -246,3 +246,23 @@ window.addEventListener("load", () => {
         acceptModal.classList.add('active');
     }, 30 * 1000);
 });
+
+const policyModal = document.querySelector('.policy-modal');
+const policyModalBtns = document.querySelectorAll('.policy-modal__open');
+const policyModalClose = document.querySelector('.policy-modal .modal-close');
+const policyModalBg = document.querySelector('.policy-modal .modal-bg');
+
+policyModalBtns.forEach(btn => {
+    btn.onclick = e => {
+        e.preventDefault();
+        policyModal.classList.add('active');
+    }
+})
+
+policyModalClose.onclick = () => {
+    policyModal.classList.remove('active');
+}
+
+policyModalBg.onclick = () => {
+    policyModal.classList.remove('active');
+}
