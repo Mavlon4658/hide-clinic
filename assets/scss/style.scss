@@ -1731,6 +1731,10 @@ button, input, textarea, li, div {
 .patient {
     padding-top: 120px;
 
+    @include media(1024) {
+        padding-top: 60px;
+    }
+
     &-container {
         box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
         background: #fff;
@@ -1739,6 +1743,12 @@ button, input, textarea, li, div {
         align-items: stretch;
         padding: 10px;
         gap: 10px;
+
+        @include media(1024) {
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
     }
 
     &-content {
@@ -1753,6 +1763,27 @@ button, input, textarea, li, div {
         background: #fefcf8;
         border-radius: 20px;
 
+        @include media(1024) {
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+            width: 100%;
+            gap: 10px;
+        }
+
+        &__head {
+            @include media(1024) {
+                box-shadow: 0 4px 24px 0 rgba(97, 97, 97, 0.15);
+                background: #fff;
+                border-radius: 20px;
+                overflow: hidden;
+                padding: 30px 0;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+            }
+        }
+
         h2 {
             font-weight: 700;
             font-size: 32px;
@@ -1761,6 +1792,27 @@ button, input, textarea, li, div {
             text-transform: uppercase;
             text-align: center;
             color: #363636;
+            margin-bottom: 30px;
+
+            @include media(1024) {
+                max-width: 256px;
+                margin: 0 auto 25px;
+            }
+        }
+
+        .icon {
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 28px;
+
+            @include media(1024) {
+                display: block;
+            }
+
+            @include media(768) {
+                bottom: 10px;
+            }
         }
 
         ul {
@@ -1768,6 +1820,11 @@ button, input, textarea, li, div {
             flex-direction: column;
             gap: 30px;
             width: 100%;
+
+            @include media(1024) {
+                align-items: flex-start;
+                gap: 9px;
+            }
         }
 
         li {
@@ -1775,6 +1832,10 @@ button, input, textarea, li, div {
             flex-direction: column;
             align-items: center;
             gap: 5px;
+
+            @include media(1024) {
+                align-items: flex-start;
+            }
 
             h3 {
                 font-weight: 700;
@@ -1784,6 +1845,21 @@ button, input, textarea, li, div {
                 text-transform: uppercase;
                 text-align: center;
                 color: #d9bd3f;
+
+                @include media(1024) {
+                    background: #d9bd3f;
+                    border-radius: 0 30px 30px 0;
+                    padding: 10px 24px;
+                    color: white;
+                }
+
+                @include media(768) {
+                    font-size: 14px;
+
+                    span {
+                        display: none;
+                    }
+                }
             }
 
             p {
@@ -1792,6 +1868,10 @@ button, input, textarea, li, div {
                 letter-spacing: 0.03em;
                 text-align: center;
                 color: rgba(54, 54, 54, 0.6);
+
+                @include media(1024) {
+                    display: none;
+                }
             }
         }
 
@@ -1799,6 +1879,10 @@ button, input, textarea, li, div {
             height: 1px;
             width: 100%;
             background: linear-gradient(to right, rgba(217, 191, 62, 0), #D9C03E, rgba(217, 191, 62, 0));
+
+            @include media(1024) {
+                display: none;
+            }
         }
 
         &__foot {
@@ -1808,6 +1892,10 @@ button, input, textarea, li, div {
             align-items: center;
             gap: 20px;
 
+            @include media(768) {
+                gap: 12px;
+            }
+
             .main-btn {
                 width: 100%;
             }
@@ -1816,6 +1904,10 @@ button, input, textarea, li, div {
                 font-size: 12px;
                 line-height: 150%;
                 text-align: center;
+
+                @include media(768) {
+                    font-size: 10px;
+                }
 
                 a {
                     display: inline;
@@ -1831,6 +1923,19 @@ button, input, textarea, li, div {
         border-radius: 20px;
         overflow: hidden;
         position: relative;
+
+        @include media(1024) {
+            display: none;
+            height: 380px;
+        }
+
+        &.mb {
+            display: none;
+
+            @include media(1024) {
+                display: block;
+            }
+        }
 
         img {
             position: absolute;
