@@ -266,3 +266,12 @@ policyModalClose.onclick = () => {
 policyModalBg.onclick = () => {
     policyModal.classList.remove('active');
 }
+
+const header = document.querySelector('header.header');
+window.addEventListener('scroll', function () {
+    if (this.scrollY > 20) {
+        header.classList.add('fixed');
+    } else {
+        header.classList.remove('fixed')
+    }
+})

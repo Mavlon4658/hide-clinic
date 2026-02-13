@@ -221,16 +221,20 @@ button, input, textarea, li, div {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 49.86px;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+  transition: 0.2s ease-in-out all;
 }
 @media screen and (max-width: 1024px) {
   .header {
     top: 11px;
   }
+}
+.header.fixed {
+  top: 10px;
 }
 .header-container {
   max-width: 1360px;

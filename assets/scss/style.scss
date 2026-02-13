@@ -154,14 +154,19 @@ button, input, textarea, li, div {
 
 // Header
 .header {
-    position: absolute;
+    position: fixed;
     top: 49.86px;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
+    transition: .2s ease-in-out all;
 
     @include media(1024) {
         top: 11px;
+    }
+
+    &.fixed {
+        top: 10px;
     }
 
     &-container {
