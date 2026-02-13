@@ -22,6 +22,8 @@ const swiper = new Swiper('.swiper-examples', {
     initialSlide: 3,
     speed: 400,
     loop: true,
+    loopedSlides: 6,
+    loopAdditionalSlides: 6,
     navigation: {
         nextEl: '.experience .swp-navigation .next-btn',
         prevEl: '.experience .swp-navigation .prev-btn',
