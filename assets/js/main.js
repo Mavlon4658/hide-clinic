@@ -63,26 +63,7 @@ const examplesSlideBigText = document.querySelector('.examples__slide-big .examp
 const examplesSlideBigImg = document.querySelector('.examples__slide-big .examples__slide-img')
 
 function removeSlider() {
-    if (window.innerWidth <= 768) {
-        examplesSlider.classList.remove('swiper-examples')
-        examplesSliderLine.classList.remove('swiper-wrapper')
-        examplesSlide.forEach((item, i) => {
-            item.classList.remove('swiper-slide')
-
-            examplesSlides.forEach((item, i) => {
-                examplesSlides[0].classList.add('examples__slide--active')
-                item.addEventListener('click', () => {
-                    examplesSlides.forEach(items => {
-                        items.classList.remove('examples__slide--active')
-                    })
-                    examplesSlides[i].classList.add('examples__slide--active')
-                    examplesSlideBigImg.src = examplesSlides[i].querySelector('.examples__slide-img').src
-                    examplesSlideBigValue.innerHTML = examplesSlides[i].querySelector('.examples__slide-head-value').innerHTML
-                    examplesSlideBigText.innerHTML = examplesSlides[i].querySelector('.examples__slide-head-text-mob').innerHTML
-                })
-            })
-        })
-    } else {
+    if (window.innerWidth > 768) {
         examplesSlider.classList.add('swiper-examples')
         examplesSliderLine.classList.add('swiper-wrapper')
         examplesSlide.forEach(item => {
@@ -97,10 +78,48 @@ window.addEventListener('resize', () => {
     removeSlider()
 })
 
+const experienceMainSwp = new Swiper('.experience-main .swiper', {
+    slidesPerView: 1,
+    effect: 'fade',
+    allowTouchMove: false,
+})
+
+const experienceList = document.querySelectorAll('.experience-list__item')
+experienceList.forEach((btn, btnIdx) => {
+    btn.onclick = () => {
+        experienceMainSwp.slideTo(btnIdx);
+        experienceList.forEach((el, elIdx) => {
+            if (elIdx == btnIdx) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active')
+            }
+        })
+    }
+})
+
 // Review slider
 const reviewSwp = new Swiper('.review-swp', {
-    slidesPerView: 3,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    breakpoints: {
+        1200: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+        },
+        768: {
+            spaceBetween: 10,
+            slidesPerView: 2,
+        },
+    },
+    navigation: {
+        nextEl: '.review .swp-navigation .next-btn',
+        prevEl: '.review .swp-navigation .prev-btn',
+    },
+    pagination: {
+        el: '.review .swp-navigation .swp-pagination',
+        clickable: true,
+    },
 })
 
 // License slider
