@@ -11,7 +11,7 @@ const phoneInp = document.querySelectorAll('input[type="tel"]');
 if (phoneInp.length) {
     phoneInp.forEach(el => {
         IMask(el, {
-            mask: '+{9}00 00 000 0000',
+            mask: '+000 00 000 0000',
         })
     });
 }
@@ -247,28 +247,32 @@ acceptModalBtn.onclick = () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
         acceptModal.classList.add('active');
-    }, 30 * 1000);
+    }, 3 * 1000);
 });
 
-const policyModal = document.querySelector('.policy-modal');
-const policyModalBtns = document.querySelectorAll('.policy-modal__open');
-const policyModalClose = document.querySelector('.policy-modal .modal-close');
-const policyModalBg = document.querySelector('.policy-modal .modal-bg');
+const modalCls = ['.privacy-modal', '.disclaimer-modal', '.cookie-modal', '.term-modal'];
 
-policyModalBtns.forEach(btn => {
-    btn.onclick = e => {
-        e.preventDefault();
-        policyModal.classList.add('active');
+modalCls.forEach(cls => {
+    const m = document.querySelector(cls);
+    const mOpenBtns = document.querySelectorAll(cls + '__open');
+    const mCloseBtn = document.querySelector(cls + ' .modal-close');
+    const mBg = document.querySelector(cls + ' .modal-bg');
+
+    mOpenBtns.forEach(btn => {
+        btn.onclick = e => {
+            e.preventDefault();
+            m.classList.add('active');
+        }
+    })
+
+    mCloseBtn.onclick = () => {
+        m.classList.remove('active');
+    }
+    
+    mBg.onclick = () => {
+        m.classList.remove('active');
     }
 })
-
-policyModalClose.onclick = () => {
-    policyModal.classList.remove('active');
-}
-
-policyModalBg.onclick = () => {
-    policyModal.classList.remove('active');
-}
 
 const header = document.querySelector('header.header');
 window.addEventListener('scroll', function () {
@@ -278,3 +282,138 @@ window.addEventListener('scroll', function () {
         header.classList.remove('fixed')
     }
 })
+
+const licenseModal = document.querySelector('.license-modal');
+const licenseModalOpenBtns = document.querySelectorAll('.license-modal__open');
+const licenseModalCloseBtn = document.querySelectorAll('.license-modal .close-btn');
+const licenseModalBg = document.querySelector('.license-modal__bg');
+
+licenseModalOpenBtns.forEach(btn => {
+    btn.onclick = () => {
+        const img = btn.querySelector('img');
+        let imgUrl;
+
+        if (img) {
+            imgUrl = img.getAttribute('src');
+        } else {
+            imgUrl = btn.getAttribute('src');
+        }
+
+        licenseModal.querySelector('.main-img').setAttribute('src', imgUrl)
+
+        licenseModal.classList.add('active');
+    }
+
+    licenseModalCloseBtn.forEach(btn => {
+        btn.onclick = () => {
+            licenseModal.classList.remove('active');
+        }
+    })
+
+    licenseModalBg.onclick = () => {
+        licenseModal.classList.remove('active');
+    }
+})
+
+const license2Swp = new Swiper('.license-modal__2-content .swiper', {
+    slidesPerView: 1,
+    effect: "coverflow",
+    loop: true,
+    loopedSlides: 2,
+    loopAdditionalSlides: 2,
+    spaceBetween: 290,
+    breakpoints: {
+        768: {
+            grabCursor: true,
+            centeredSlides: true,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: -14,
+                depth: 260,
+                modifier: 2.3
+            },
+            spaceBetween: 200,
+        }
+    },
+    navigation: {
+        nextEl: '.license-modal__2-content .swp-navigation .next-btn',
+        prevEl: '.license-modal__2-content .swp-navigation .prev-btn',
+    },
+})
+
+const license2Modal = document.querySelector('.license-modal__2');
+const license2ModalOpenBtns = document.querySelectorAll('.license-modal__2-open');
+const license2ModalCloseBtn = document.querySelectorAll('.license-modal__2 .close-btn');
+
+license2ModalCloseBtn.forEach(btn => {
+    btn.onclick = () => {
+        license2Modal.classList.remove('active');
+    }
+})
+
+license2ModalOpenBtns.forEach((btn, idx) => {
+    btn.onclick = () => {
+        license2Swp.slideToLoop(idx);
+        license2Modal.classList.add('active');
+    }
+})
+
+const cookieSettings = document.querySelector('.cookie-settings');
+const cookieSettingsOpenBtns = document.querySelectorAll('.cookie-settings__open');
+const cookieSettingsCloseBtn = document.querySelectorAll('.cookie-settings .close-btn');
+
+cookieSettingsCloseBtn.forEach(btn => {
+    btn.onclick = () => {
+        cookieSettings.classList.remove('active');
+    }
+})
+
+cookieSettingsOpenBtns.forEach(btn => {
+    btn.onclick = e => {
+        e.preventDefault();
+        acceptModal.classList.remove('active')
+        cookieSettings.classList.add('active');
+    }
+})
+
+const contactTextBtn = document.querySelector('.contact-left__text .main-btn');
+contactTextBtn.onclick = e => {
+    e.preventDefault();
+    document.querySelector('.contact-left').classList.add('active')
+}
+
+const requestForms = document.querySelectorAll('.request-form__group input');
+const requestFormsBtn = document.querySelector('.request-form__group .main-btn');
+const successModal = document.querySelector('.success-modal');
+const successModalCloseBtns = document.querySelectorAll('.success-modal .close-btn');
+const successModalBg = document.querySelectorAll('.success-modal__bg');
+
+requestFormsBtn.onclick = e => {
+    e.preventDefault();
+
+    let t = true;
+
+    requestForms.forEach(inp => {
+        if (inp.value.length < 3) {
+            t = false;
+        }
+    })
+
+    if (t) {
+        requestFormsBtn.textContent = "Sending...";
+        setTimeout(() => {
+            requestFormsBtn.textContent = "Get a free Consultation";
+            successModal.classList.add('active');
+        }, 2000);
+    }
+}
+
+successModalCloseBtns.forEach(btn => {
+    btn.onclick = () => {
+        successModal.classList.remove('active');
+    }
+})
+
+successModalBg.onclick = () => {
+    successModal.classList.remove('active');
+}
