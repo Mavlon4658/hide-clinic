@@ -247,7 +247,7 @@ acceptModalBtn.onclick = () => {
 window.addEventListener("load", () => {
     setTimeout(() => {
         acceptModal.classList.add('active');
-    }, 3 * 1000);
+    }, 10 * 1000);
 });
 
 const modalCls = ['.privacy-modal', '.disclaimer-modal', '.cookie-modal', '.term-modal'];
