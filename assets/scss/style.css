@@ -1531,6 +1531,7 @@ button, input, textarea, li, div {
   line-height: 150%;
   color: rgba(54, 54, 54, 0.7);
   max-width: 30px;
+  display: none;
 }
 .experience-list__item .small-img {
   position: absolute;

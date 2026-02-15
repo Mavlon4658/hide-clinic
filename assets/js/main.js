@@ -11,7 +11,14 @@ const phoneInp = document.querySelectorAll('input[type="tel"]');
 if (phoneInp.length) {
     phoneInp.forEach(el => {
         IMask(el, {
-            mask: '+000 00 000 0000',
+            mask: /^\+\d*$/,
+            lazy: true,
+            prepare: (str, masked) => {
+                if (!masked.value && /\d/.test(str)) {
+                    return '+' + str;
+                }
+                return str;
+            }
         })
     });
 }
@@ -245,9 +252,7 @@ acceptModalBtn.onclick = () => {
 }
 
 window.addEventListener("load", () => {
-    setTimeout(() => {
-        acceptModal.classList.add('active');
-    }, 10 * 1000);
+    acceptModal.classList.add('active');
 });
 
 const modalCls = ['.privacy-modal', '.disclaimer-modal', '.cookie-modal', '.term-modal'];
