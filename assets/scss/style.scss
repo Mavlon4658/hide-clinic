@@ -3191,7 +3191,7 @@ button, input, textarea, li, div {
             z-index: 1;
         }
 
-        iframe {
+        iframe, .map-block {
             position: absolute;
             top: 0;
             left: 0;

@@ -3113,7 +3113,7 @@ button, input, textarea, li, div {
   background: rgba(255, 243, 219, 0.6);
   z-index: 1;
 }
-.contact-left iframe {
+.contact-left iframe, .contact-left .map-block {
   position: absolute;
   top: 0;
   left: 0;

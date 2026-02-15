@@ -164,7 +164,7 @@ if (accordions) {
             if (accItem.classList.contains('active')) {
                 accBody.style.maxHeight = accBody.scrollHeight + 'px';
             }
-        
+
             accBtn.addEventListener('click', () => {
                 accItem.classList.toggle('active');
                 accBody.style.maxHeight = accBody.style.maxHeight ? null : accBody.scrollHeight + 'px';
@@ -273,7 +273,7 @@ modalCls.forEach(cls => {
     mCloseBtn.onclick = () => {
         m.classList.remove('active');
     }
-    
+
     mBg.onclick = () => {
         m.classList.remove('active');
     }
